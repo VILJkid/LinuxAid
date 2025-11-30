@@ -27,6 +27,9 @@ changelog:
     - title: 🥴 Others
       order: 999
 
+builds:
+  - skip: true
+
 gitea_urls:
   api: https://gitea.obmondo.com/api/v1
   download: https://gitea.obmondo.com
