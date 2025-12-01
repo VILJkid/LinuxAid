@@ -473,7 +473,3 @@ mod 'obmondo/sanoid',
 mod 'jcpunk/vnc',
     :git => 'https://github.com/jcpunk/puppet-vnc.git',
     :ref => '4.2.1'
-
-mod 'obmondo/rustdesk',
-    :git => 'https://github.com/Obmondo/puppet-rustdesk',
-    :ref => 'v1.0.0'
