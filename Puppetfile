@@ -477,3 +477,7 @@ mod 'jcpunk/vnc',
 mod 'obmondo/rustdesk',
     :git => 'https://github.com/Obmondo/puppet-rustdesk',
     :ref => 'v1.0.0'
+
+mod 'obmondo/jira',
+    :git => 'https://github.com/voxpupuli/puppet-jira.git',
+    :ref => 'v6.2.1'
