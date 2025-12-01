@@ -41,7 +41,7 @@ OPTIONS:
                         Optional: Commit hash to pin to specific version
 
   --add-module <module-url> [commit-hash|]
-                        Update a specific Openvox module
+                        Add a specific Openvox module
                         Requires: Upstream module name
                         Optional: Commit hash to pin to specific version
 
@@ -51,6 +51,9 @@ OPTIONS:
   -h, --help            Display this help message and exit
 
 EXAMPLES:
+  # Add a specific module with latest tag
+  ${SCRIPT_NAME} --add-module <module-name>
+
   # Update a specific module with pinned commit or specific tag
   ${SCRIPT_NAME} --update-module <module-name> <commit-hash>
   ${SCRIPT_NAME} --update-module <module-name> <tag>
@@ -241,6 +244,10 @@ mod 'obmondo/${MODULE_NAME}',
 EOF
     echo "Added ${MODULE_NAME} at ${LATEST_TAG} to Puppetfile"
   fi
+
+  # Stage and amend the Puppetfile into the previous commit  
+  git add "$PUPPETFILE"  
+  git commit --amend --no-edit
 }
 
 # Function to add new module in linuxaid
